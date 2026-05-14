@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Data
+# It is often better to exclude raw data and provide scripts to download it
+data/raw/
+data/processed/
+data/final/
+data/metadata/
+
+# Results
+# Exclude models and large tables if they are too big
+results/models/
+results/figures/
+results/tables/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+PROJECT_CONTEXT.md
+AGENT_RULES.md
+HANDOFF.md
