@@ -47,7 +47,7 @@ nafld-single-dataset/
 ### Installation
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/YourUsername/NAFLD-Biomarker-Discovery.git
+    git clone https://github.com/Karim-Zeyada/nafld-single-dataset.git
     cd NAFLD-Biomarker-Discovery
     ```
 
