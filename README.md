@@ -48,7 +48,7 @@ nafld-single-dataset/
 1.  **Clone the repository**:
     ```bash
     git clone https://github.com/Karim-Zeyada/nafld-single-dataset.git
-    cd NAFLD-Biomarker-Discovery
+    cd nafld-single-dataset
     ```
 
 2.  **Create a virtual environment**:
