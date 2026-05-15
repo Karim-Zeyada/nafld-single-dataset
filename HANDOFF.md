@@ -71,7 +71,7 @@ The following decisions are final. A fresh agent must not question or re-open th
 | `NB03_preprocessing.ipynb` | ✅ Built and Executed Successfully |
 | `NB04_feature_selection.ipynb` | ✅ Built and Executed Successfully |
 | `NB05_model_training.ipynb` | ✅ Built and Executed Successfully |
-| `NB06_shap_explainability.ipynb` | ✅ Built and Executed Successfully |
+| `NB06_shap_explainability.ipynb` | ✅ Refactored for comparative analysis — **needs execution** |
 | `NB07_biological_validation.ipynb` | ✅ Built — **not yet run** |
 
 ### Environment Setup
@@ -103,18 +103,19 @@ The following decisions are final. A fresh agent must not question or re-open th
 - **Held-out Test Macro-AUC:** 0.917
 - The model generalizes beautifully with zero evidence of data leakage or systemic overfitting.
 
-### NB06 — SHAP Explainability (SUCCESS)
-- Computes exact multi-class SHAP values (3D arrays processed into 4 individual arrays).
-- Saves top 50 genes per class to `results/tables/top_shap_genes_per_class.csv`
-- Primary figure `shap_per_class_barplot.png` generated.
+### NB06 — SHAP Explainability (REFACTORED)
+- Computes exact multi-class SHAP values for BOTH XGBoost and Logistic Regression models.
+- Generates side-by-side comparative beeswarm plots and per-class SHAP matrices.
+- Saves comparative top genes per class to `results/tables/top_shap_genes_per_class_comparative.csv`
+- A workaround was implemented to wrap the `predict_proba` function to bypass SHAP Pipeline `AttributeError`s.
 
 ---
 
 ## 4. Immediate Next Action
 
-**Researcher:** Execute `NB07_biological_validation.ipynb`.
+**Researcher:** Execute `NB06_shap_explainability.ipynb`.
 
-Ensure that `results/tables/top_shap_genes_per_class.csv` exists so `gseapy` can map the identified biomarkers to GO and KEGG pathways. 
+After generating the comparative SHAP results, proceed to execute `NB07_biological_validation.ipynb`. Ensure that `results/tables/top_shap_genes_per_class_comparative.csv` is correctly loaded in NB07 so `gseapy` can map the identified biomarkers to GO and KEGG pathways. 
 This will wrap up the complete end-to-end multi-class dataset pipeline!
 
 ---
